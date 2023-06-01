@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recCard"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="5dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:id="@+id/recImage"
+            android:src="@drawable/uploadimg"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="150dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recDepartment"
+                android:text="Department"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recCourse"
+                android:text="Cource"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recYear"
+                android:text="Year"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recExamType"
+                android:text="Type"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recUniversity"
+                android:text="University"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginStart="10dp"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

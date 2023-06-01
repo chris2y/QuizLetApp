@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".DetailSelectedItemQuiz">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/back_icon_toolbar"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:id="@+id/detailTitle"
+            android:text="User: "
+            android:layout_gravity="center"
+            android:textSize="20dp"/>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/detailImageSlider1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                android:background="@color/black"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#232323"
+                app:sliderIndicatorUnselectedColor="#A8A8A8" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/light_black"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/dataSeenCounter"
+            android:layout_width="match_parent"
+            android:layout_alignRight="@+id/divider"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:text="Seen: "
+            android:gravity="center"
+            android:layout_alignParentStart="true"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/light_white"
+            android:layout_centerInParent="true"/>
+
+
+        <TextView
+            android:layout_alignLeft="@+id/divider"
+            android:id="@+id/dataDate"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:text="Date: "
+
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Department -->
+            <TextView
+                android:id="@+id/detailDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Department"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_white"
+                android:layout_below="@id/detailDepartment"/>
+
+            <!-- Cource -->
+            <TextView
+                android:id="@+id/detailCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Course"
+                android:layout_below="@id/detailDepartment"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_white"
+                android:layout_below="@id/detailCourse"/>
+
+            <!-- Year -->
+            <TextView
+                android:id="@+id/detailYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Year"
+                android:layout_below="@id/detailCourse"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_white"
+                android:layout_below="@id/detailYear"/>
+
+            <!-- ExamType -->
+            <TextView
+                android:id="@+id/detailExamType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="ExamType"
+                android:layout_below="@id/detailYear"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_white"
+                android:layout_below="@id/detailExamType"/>
+
+            <!-- University -->
+            <TextView
+                android:id="@+id/detailUniversity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="University"
+                android:layout_below="@id/detailExamType"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_white"
+                android:layout_below="@id/detailUniversity"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

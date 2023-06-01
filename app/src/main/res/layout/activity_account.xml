@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityAccount">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+
+
+
+        <TextView
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottomNav"
+            android:layout_gravity="right"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginEnd="10dp"
+            android:text="Logout" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Account"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+            android:layout_below="@+id/toolbar"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+        android:id="@+id/profileRelativeLayout"
+        android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/accountimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/profileholder"
+            app:shapeAppearanceOverlay="@style/CircularImageView" />
+
+        <ImageView
+                android:id="@+id/editImage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/editprofile"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="2dp" />
+
+        </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/profileRelativeLayout"
+        android:text=""
+        android:id="@+id/txtUsername"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/txtViewRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txtUsername">
+
+        <TextView
+            android:id="@+id/leftTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Applied"
+            android:layout_toStartOf="@id/divider"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:id="@+id/txtApplied"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="0"
+            android:textSize="32dp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:layout_toStartOf="@id/divider"
+            android:layout_alignParentTop="true"
+            />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtPosted"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="0"
+            android:textSize="32dp"
+            android:layout_toEndOf="@id/divider"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:layout_alignParentTop="true"
+             />
+
+        <TextView
+            android:id="@+id/rightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posted"
+            android:layout_toEndOf="@id/divider"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabMode="scrollable"
+        app:tabGravity="center"
+        android:layout_below="@+id/txtViewRelativeLayout"
+        android:id="@+id/tabLayout">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Review"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bank Detail"/>
+
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_below="@+id/tabLayout"
+            android:layout_above="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager"
+            />
+
+
+    <RelativeLayout
+            android:id="@+id/bottomNav"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_corner"
+                android:elevation="5dp"
+                app:itemIconSize="25dp"
+                app:itemIconTint="@drawable/item_selector"
+                app:itemRippleColor="@android:color/transparent"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/bottom_menu" />
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>
